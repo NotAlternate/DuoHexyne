@@ -42,4 +42,4 @@ What does it have to offer? A full detailed description, documentation, and inst
 
 ## License
 
-Repository licensed under the [MIT](LICENSE.txt) license.
+Repository licensed under the [MIT](LICENSE) license.

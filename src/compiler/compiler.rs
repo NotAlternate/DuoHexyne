@@ -1,7 +1,7 @@
 use std::fs;
 use std::process::exit;
 use crate::strings;
-// use crate::compiler::lexer;
+use crate::compiler::lexer;
 // use crate::compiler::ast::ast;
 
 #[allow(non_snake_case)]
@@ -15,9 +15,8 @@ pub fn compile(inputFile: String) {
     }
     source = format!("\n{}", source);
 
-    println!("File:\n{}\n\n", source);
-    // let tokens = lexer::lexer::tokenize(&source);
-    // println!("Tokens:\n{:?}\n\n", tokens); // debug
+    let tokens = lexer::lexer::tokenize(&source);
+    println!("Tokens:\n{:?}\n\n", tokens); // debug
     // let ast = ast::ASTize(tokens);
     // println!("AST:\n{:?}", ast); // debug
 }

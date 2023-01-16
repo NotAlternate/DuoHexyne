@@ -28,11 +28,10 @@ fn main() {
 
     // Checking filenames & Compiling
     if inputFile.is_empty() { eprintln!("{}", strings::parse(strings::Errors::NoInputFilename)); exit(1); }
-    if outputFile.is_empty() { outputFile = "main".to_string(); }
+    if outputFile.is_empty() { outputFile = "out".to_string(); }
     if !inputFile.contains(".") { inputFile += ".hxy"; }
 
-    // debug
-    println!("Input: {} :: Output: {}\n\n", inputFile, outputFile);
+    println!("Input: {} :: Output: {}\n", inputFile, outputFile); // debug
 
     compiler::compiler::compile(inputFile);
 }
